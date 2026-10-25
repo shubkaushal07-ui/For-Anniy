@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffe6f1">
+  <title>Anniy’s Birthday Adventure 🎀</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <span>♡</span><span>✦</span><span>♡</span><span>✿</span><span>♡</span><span>✧</span>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Birthday home">🧸 <span>Anniy’s little universe</span></a>
+    <div class="top-actions">
+      <button class="icon-button" id="musicToggle" aria-pressed="false" title="Toggle background music">♫ <span id="musicLabel">Music: off</span></button>
+      <button class="icon-button" id="soundToggle" aria-pressed="false" title="Toggle sound effects">🔔 <span id="soundLabel">Sounds: off</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="screen active" id="home">
+      <div class="hero">
+        <div class="eyebrow">A VERY IMPORTANT MISSION ✉️</div>
+        <div class="hero-bears" aria-hidden="true"><span>🧸</span><span>💗</span><span>🐻</span></div>
+        <h1>Hey, <span class="script">Anniy!</span></h1>
+        <p class="hero-sub">A tiny bear told us it’s almost your birthday… and then everything got suspiciously sparkly.</p>
+        <div class="date-pill">🎂 Birthday mission: <strong>26 October 2026</strong></div>
+        <button class="primary-button" data-go="chapter1">Open your surprise <span>→</span></button>
+        <p class="microcopy">Made with friendship, chaos, and an unreasonable number of hearts.</p>
+      </div>
+    </section>
+
+    <section class="screen" id="chapter1">
+      <div class="chapter-heading">
+        <span class="chapter-number">CHAPTER 01</span>
+        <h2>The Magical Entrance 🌸</h2>
+        <p>First, prove that you are the birthday person. Extremely serious business.</p>
+      </div>
+      <div class="panel">
+        <div class="big-emoji">🕵️‍♀️🧸</div>
+        <h3>Security question!</h3>
+        <p>What is your extremely official nickname?</p>
+        <div class="answer-row">
+          <button class="choice" data-answer="wrong">Princess of Chaos</button>
+          <button class="choice" data-answer="right">Naekkeo 💗</button>
+          <button class="choice" data-answer="wrong">CEO of Nonsense</button>
+        </div>
+        <p id="quizFeedback" class="feedback" aria-live="polite"></p>
+        <button class="primary-button" id="chapter1Complete" disabled>Unlock Chapter 02 🔒</button>
+      </div>
+      <div class="section-grid">
+        <article class="mini-card"><span>🌷</span><h3>Official status</h3><p>Certified birthday legend.</p></article>
+        <article class="mini-card"><span>🐻</span><h3>Bear approval</h3><p>The bears have reviewed your application.</p></article>
+        <article class="mini-card"><span>✨</span><h3>Magic level</h3><p>Unreasonably sparkly.</p></article>
+      </div>
+    </section>
+
+    <section class="screen" id="chapter2">
+      <div class="chapter-heading">
+        <span class="chapter-number">CHAPTER 02</span>
+        <h2>The Birthday Carnival 🎂</h2>
+        <p>Three birthday traditions. One very important wish.</p>
+      </div>
+      <div class="panel">
+        <div class="big-emoji cake" id="cake">🎂</div>
+        <h3>Make a wish, Naekkeo!</h3>
+        <p>Tap the cake to send a little birthday magic into the universe.</p>
+        <button class="primary-button" id="wishButton">Make a wish ✨</button>
+        <p id="wishMessage" class="feedback" aria-live="polite"></p>
+      </div>
+      <div class="panel">
+        <h3>Pick your birthday energy</h3>
+        <p>What flavour of birthday chaos are we serving?</p>
+        <div class="answer-row energy-options">
+          <button class="choice" data-energy="soft">Soft & cozy 🧸</button>
+          <button class="choice" data-energy="chaos">Maximum chaos 💥</button>
+          <button class="choice" data-energy="sparkle">Sparkle overload ✨</button>
+        </div>
+        <p id="energyMessage" class="feedback" aria-live="polite"></p>
+        <button class="primary-button" id="chapter2Complete" disabled>Finish the carnival 🔒</button>
+      </div>
+    </section>
+
+    <section class="screen" id="chapter3">
+      <div class="chapter-heading">
+        <span class="chapter-number">CHAPTER 03</span>
+        <h2>The Friendship Arcade 🎮</h2>
+        <p>Games, questionable questions, and a bear who takes winning too seriously.</p>
+      </div>
+      <div class="panel">
+        <div class="big-emoji">🧠💗</div>
+        <h3>Bestie quiz: round one</h3>
+        <p>What makes a best-friend website truly elite?</p>
+        <div class="answer-row quiz-two">
+          <button class="choice" data-arcade="wrong">Tax forms and spreadsheets</button>
+          <button class="choice" data-arcade="right">Inside jokes, memories, and love</button>
+          <button class="choice" data-arcade="wrong">A 400-page terms document</button>
+        </div>
+        <p id="arcadeFeedback" class="feedback" aria-live="polite"></p>
+      </div>
+      <div class="panel">
+        <h3>Catch the hearts 💞</h3>
+        <p>Tap the hearts as they appear. Collect 5 to earn your arcade badge!</p>
+        <div class="heart-game" id="heartGame">
+          <span class="heart-score">Hearts: <strong id="heartScore">0</strong>/5</span>
+          <button id="heartTarget" class="heart-target" aria-label="Catch a heart">💗</button>
+        </div>
+        <button class="secondary-button" id="resetHearts">Try again ↻</button>
+        <p id="heartFeedback" class="feedback" aria-live="polite"></p>
+        <button class="primary-button" id="chapter3Complete" disabled>Claim arcade badge 🔒</button>
+      </div>
+    </section>
+<section class="screen" id="chapter4">
+  <div class="chapter-heading">
+    <span class="chapter-number">CHAPTER 04</span>
+    <h2>Little Gallery 📸</h2>
+    <p>
+      A tiny gallery dedicated to one very special human.
+      Six pictures, unlimited appreciation, and absolutely
+      no escape from birthday compliments. 💗
+    </p>
+  </div>
+
+  <!-- PHOTO GALLERY -->
+
+  <div class="memory-grid gallery-grid">
+
+```
+<!-- Photo 1 -->
+<article class="memory-card photo-card">
+  <img class="memory-photo" src="photos/anniy1.jpeg" alt="Anniy's photo" loading="lazy">
+  <div class="photo-caption">
+    <h3>Miss Sunshine ☀️</h3>
+    <p>A little picture of someone very special. 💗</p>
+  </div>
+</article>
+
+<!-- Photo 2 -->
+<article class="memory-card photo-card">
+  <img class="memory-photo" src="photos/anniy2.jpeg" alt="Anniy's photo" loading="lazy">
+  <div class="photo-caption">
+    <h3>Pretty Little Moment 🌷</h3>
+    <p>One picture, a thousand things to appreciate.</p>
+  </div>
+</article>
+
+<!-- Photo 3 -->
+<article class="memory-card photo-card">
+  <img class="memory-photo" src="photos/anniy3.jpeg" alt="Anniy's photo" loading="lazy">
+  <div class="photo-caption">
+    <h3>Main Character Era 🎬</h3>
+    <p>Being iconic is apparently a full-time job.</p>
+  </div>
+</article>
+
+<!-- Photo 4 -->
+<article class="memory-card photo-card">
+  <img class="memory-photo" src="photos/anniy4.jpeg" alt="Anniy's photo" loading="lazy">
+  <div class="photo-caption">
+    <h3>Little Miss Chaos 😂</h3>
+    <p>Sweet, chaotic, and completely unforgettable.</p>
+  </div>
+</article>
+
+<!-- Photo 5 -->
+<article class="memory-card photo-card">
+  <img class="memory-photo" src="photos/anniy5.jpeg" alt="Anniy's photo" loading="lazy">
+  <div class="photo-caption">
+    <h3>A Moment to Keep 💌</h3>
+    <p>Some moments deserve their own little space.</p>
+  </div>
+</article>
+
+<!-- Photo 6 -->
+<article class="memory-card photo-card">
+  <img class="memory-photo" src="photos/anniy6.jpeg" alt="Anniy's photo" loading="lazy">
+  <div class="photo-caption">
+    <h3>Forever Iconic 🎀</h3>
+    <p>This gallery would not be complete without you.</p>
+  </div>
+</article>
+```
+
+  </div>
+
+  <!-- APPRECIATION NOTE -->
+
+  <div class="panel">
+    <h3>Open a tiny appreciation note 💌</h3>
+
+```
+<button class="secondary-button" id="noteButton">
+  Open a note
+</button>
+
+<p id="noteText" class="hidden-note">
+  Anniy, you make ordinary moments more fun just by being yourself.
+  Never underestimate how much your presence can brighten someone's day. 💗
+</p>
+
+<button class="primary-button" id="chapter4Complete" disabled>
+  Leave the museum →
+</button>
+```
+
+  </div>
+
+  <p class="hint">
+    Add your own photos and memories to make this gallery special.
+  </p>
+</section>
+
+    <section class="screen" id="chapter5">
+      <div class="chapter-heading">
+        <span class="chapter-number">CHAPTER 05</span>
+        <h2>The Secret Vault 🔐</h2>
+        <p>Only a person with a very important birthday may open this vault.</p>
+      </div>
+      
+<div class="panel vault-panel">
+  <div class="big-emoji">💌</div>
+  <h3>A letter for Naekkeo</h3>
+  <p>Press the envelope to reveal a message. Dramatic typing animation included.</p>
+
+  <button class="envelope" id="envelope" aria-label="Open birthday letter">
+    <span class="envelope-back"></span>
+    <span class="envelope-paper"></span>
+    <span class="envelope-flap"></span>
+    <span class="envelope-pocket"></span>
+    <span class="envelope-heart">♥</span>
+    <span class="envelope-label">Tap to open</span>
+  </button>
+
+  <div class="letter" id="letter" aria-live="polite"></div>
+
+  <button class="primary-button" id="chapter5Complete" disabled>
+    Seal the letter & continue 🔒
+  </button>
+</div>
+      <div class="panel">
+        <h3>Secret password 🔑</h3>
+        <p>Hint: your nickname, written exactly as it appears on this website.</p>
+        <div class="answer-row">
+          <input id="secretInput" class="text-input" placeholder="Enter secret word" autocomplete="off">
+          <button class="secondary-button" id="secretButton">Unlock</button>
+        </div>
+        <p id="secretFeedback" class="feedback" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="screen" id="chapter6">
+      <div class="chapter-heading">
+        <span class="chapter-number">CHAPTER 06</span>
+        <h2>The Grand Finale 🌠</h2>
+        <p>You made it through the chaos. The bears are emotional. One final gift awaits.</p>
+      </div>
+      <div class="panel finale-panel">
+        <div class="finale-bears">🧸 💗 🐻</div>
+        <div class="gift-box" id="giftBox">🎁</div>
+        <h3 id="finaleTitle">The last surprise is waiting…</h3>
+        <p id="finaleText">Tap the gift to open your birthday message.</p>
+        <button class="primary-button" id="openGift">Open the final gift 🎀</button>
+        <div id="finaleMessage" class="finale-message hidden">
+          <h2>HAPPY BIRTHDAY, ANNIY! 🎂</h2>
+          <p>Dear Naekkeo, I hope this next chapter of your life brings you good people, silly laughter, peaceful days, brave dreams, and countless little reasons to smile.</p>
+          <p>Thank you for being you. May your birthday be as lovely, funny, and unforgettable as you deserve. 💗</p>
+          <div class="confetti-line">🎉 ✨ 🧸 💖 🎂 🌷 🎉</div>
+          <button class="secondary-button" id="restartButton">Replay the adventure ↻</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="chapterMap">
+      <div class="chapter-heading">
+        <span class="chapter-number">YOUR ADVENTURE</span>
+        <h2>The Chapter Map 🗺️</h2>
+        <p>Only completed chapters can be revisited. Keep going to unlock the next one!</p>
+      </div>
+      <div class="map-list" id="mapList"></div>
+      <button class="secondary-button" data-go="home">Back to the beginning</button>
+    </section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Website navigation">
+    <button data-go="home">🏠<span>Home</span></button>
+    <button data-go="chapterMap">🗺️<span>Chapters</span></button>
+    <div class="progress-wrap">
+      <div class="progress-label"><span>Adventure</span><strong id="progressText">0 / 6</strong></div>
+      <div class="progress-track"><div id="progressBar"></div></div>
+    </div>
+  </nav>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <audio id="birthdayAudio" loop preload="none"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
